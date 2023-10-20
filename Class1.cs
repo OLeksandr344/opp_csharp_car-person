@@ -121,16 +121,31 @@ namespace ConsoleApp5
         {
             Name = name;
         }
-        public string ToTheString()
+        public  override string ToString()
         {
             string info = $"Іи'я - {Name}, дата народження - {BirthYear}, вік {Age()} ";
             return info;
         }
         public void Output()
         {
-            Console.WriteLine(ToTheString());
+            Console.WriteLine(ToString());
         }
-        
+        public static bool operator == (Person person, Person other)
+        {
+            if (person.GetName == other.GetName) 
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool operator !=(Person person, Person other)
+        {
+            if (person.GetName != other.GetName)
+            {
+                return true;
+            }
+            return false;
+        }
     }
     
 }
