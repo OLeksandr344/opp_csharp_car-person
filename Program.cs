@@ -78,7 +78,12 @@ internal class Program
                 }
             }
         }
-           
+        Console.WriteLine("------------------");
+        if (myPerson4 == myPerson5) 
+        {
+           myPerson4.Output();
+           myPerson5.Output();
+        }  
 
 
 
